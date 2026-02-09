@@ -1,0 +1,1124 @@
+{
+  "info": {
+    "_postman_id": "5bb61107-df20-4c0d-a5a0-c885aef26d64",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37389846"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Me\",\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"Password123\",\r\n    \"password_confirmation\": \"Password123\"\r\n   \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"test1@example.com\",\r\n    \"password\": \"Password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "UmQyUEgVUretq19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqWWZhLYhoou76XvRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "UmQyUEgVUretq19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqWWZhLYhoou76XvRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Saira Updated\",\r\n    \"email\": \"test1@example.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/user/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "user",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"test123@example.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/forget-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "forget-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"email\": \"test123@example.com\",\r\n    \"otp\":\"631858\",\r\n    \"password\": \"Password12\",\r\n    \"password_confirmation\": \"Password12\"\r\n   \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/reset-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "cLprKIkcprcx7hQAL8wwkNDtZCAClnvQkqaEtTUf04BdKOz4GtFfwv3zKtdoS5RETmyI93U0AxfoNdhP",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "cLprKIkcprcx7hQAL8wwkNDtZCAClnvQkqaEtTUf04BdKOz4GtFfwv3zKtdoS5RETmyI93U0AxfoNdhP",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/user/delete",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "user",
+                "delete"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Workspace",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "UmQyUEgVUretq19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqWWZhLYhoou76XvRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/8000/api/workspaces/get-all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "8000",
+                "api",
+                "workspaces",
+                "get-all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "HsTtipCh68hj7jrdsa49sWKHWuSuYm4kEOKDPLR5AG1zn7yIad2tyNo8JGRA9OKoKPKBtvAnvypBHpbi",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"1 workspace\", \"description\": \"Internship work at programmer force\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/workspaces/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "workspaces",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "UmQyUEgVUretq19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqWWZhLYhoou76XvRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/workspaces/delete/698275f532757eaf3401d1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "workspaces",
+                "delete",
+                "698275f532757eaf3401d1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Join using Invite",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "gzNiI4VgJa7X12jGNrrZLx7sDujpqVI86gt56wYPCiIgoxLwWd9DzGni593Qn736eMk9H9DlqlC9RMva",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"invite_code\": \"DQKNYLBS\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/workspaces/join",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "workspaces",
+                "join"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Memeber",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "om60xj5BuI2fgvwRijOWSNcAzk4jH2Gi3YJKRMevHFuqAcSm9FnXXk2FdxzcFGHLYDea1qzS4pTqKyM3",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"invite_code\": \"49NNF3UV\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/workspaces/6982883af0d93f88150ca0b3/remove-member/69827cdb32757eaf3401d1f2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "workspaces",
+                "6982883af0d93f88150ca0b3",
+                "remove-member",
+                "69827cdb32757eaf3401d1f2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Team",
+      "item": [
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "HsTtipCh68hj7jrdsa49sWKHWuSuYm4kEOKDPLR5AG1zn7yIad2tyNo8JGRA9OKoKPKBtvAnvypBHpbi",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"ddddddddddddddddddddddddhhhhhhhhhhhhhhhhhhhhhhh Developers\",\r\n    \"description\": \"This team handles API and Database\",\r\n    \"workspace_id\": \"69829c98f0d93f88150ca0bb\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/teams/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "teams",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Teams in Workspace",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "q19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/workspaces/698275f532757eaf3401d1f1/teams",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "workspaces",
+                "698275f532757eaf3401d1f1",
+                "teams"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Team",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "UmQyUEgVUretq19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqWWZhLYhoou76XvRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Data Science team Developers\",\r\n    \"description\": \"This team handles API and Database\",\r\n    \"workspace_id\": \"69827e2132757eaf3401d1f3\" \r\n\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/teams/update/{{team_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "teams",
+                "update",
+                "{{team_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "UmQyUEgVUretq19RtHE1fZIySkK3JUm17DyNjqgGb0nk57KqWWZhLYhoou76XvRhYp6PoicyJo5DZNdq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/teams/delete/{{team_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "teams",
+                "delete",
+                "{{team_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Channesl",
+      "item": [
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "HsTtipCh68hj7jrdsa49sWKHWuSuYm4kEOKDPLR5AG1zn7yIad2tyNo8JGRA9OKoKPKBtvAnvypBHpbi",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \" Discussions\",\r\n    \"type\": \"private\",\r\n    \"team_id\": \"69829cbdf0d93f88150ca0bc\", \r\n    \"workspace_id\": \"69829c98f0d93f88150ca0bb\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/channels/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "channels",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Channel of team",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "HsTtipCh68hj7jrdsa49sWKHWuSuYm4kEOKDPLR5AG1zn7yIad2tyNo8JGRA9OKoKPKBtvAnvypBHpbi",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \" Discussions\",\r\n    \"type\": \"private\",\r\n    \"team_id\": \"69829cbdf0d93f88150ca0bc\", \r\n    \"workspace_id\": \"69829c98f0d93f88150ca0bb\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/teams/{{team_id}}/channels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "teams",
+                "{{team_id}}",
+                "channels"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "HsTtipCh68hj7jrdsa49sWKHWuSuYm4kEOKDPLR5AG1zn7yIad2tyNo8JGRA9OKoKPKBtvAnvypBHpbi",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \" 444Discussions\",\r\n    \"type\": \"public\"\r\n   \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/channels/update/{{channel_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "channels",
+                "update",
+                "{{channel_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Join Channel",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "X0ivOEG4uHywVl2n6fDzRSepwpudCbn6kuSevP7PYAUUqPhev4nsXJVcAN2UqmI6JFldJYlAeQ3mWrYd",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \" Discussions\",\r\n    \"type\": \"private\",\r\n    \"team_id\": \"69829cbdf0d93f88150ca0bc\", \r\n    \"workspace_id\": \"69829c98f0d93f88150ca0bb\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/channels/join/{{channel_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "channels",
+                "join",
+                "{{channel_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Left",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "X0ivOEG4uHywVl2n6fDzRSepwpudCbn6kuSevP7PYAUUqPhev4nsXJVcAN2UqmI6JFldJYlAeQ3mWrYd",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/channels/leave/{{channel_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "channels",
+                "leave",
+                "{{channel_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Channel",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "HsTtipCh68hj7jrdsa49sWKHWuSuYm4kEOKDPLR5AG1zn7yIad2tyNo8JGRA9OKoKPKBtvAnvypBHpbi",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \" Discussions\",\r\n    \"type\": \"private\",\r\n    \"team_id\": \"69829cbdf0d93f88150ca0bc\", \r\n    \"workspace_id\": \"69829c98f0d93f88150ca0bb\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/channels/delete/{{channel_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "channels",
+                "delete",
+                "{{channel_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Messages",
+      "item": [
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "NdJ6Lv1dSDjDKm8op0uPBOBXe5vssFAdlGvd2TglfyxpTy4tctfJHKiWpxfnL8YvUoHHtNyYXAsvbPu8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n  {\r\n    \"channel_id\": \"69829e4cf0d93f88150ca0be\",\r\n    \"content\": \"8888888888888888\"\r\n    \r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/message",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "message"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Copy",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "NdJ6Lv1dSDjDKm8op0uPBOBXe5vssFAdlGvd2TglfyxpTy4tctfJHKiWpxfnL8YvUoHHtNyYXAsvbPu8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "channel_id",
+                  "value": "69829e4cf0d93f88150ca0be",
+                  "type": "text",
+                  "uuid": "dedae819-a95a-4730-b375-3e289dff2228"
+                },
+                {
+                  "key": "attachment",
+                  "type": "file",
+                  "uuid": "c2a356d3-d4d7-4f20-a324-74783023aecb",
+                  "src": "/C:/Users/Well/Desktop/notes/how to work in framework.txt"
+                },
+                {
+                  "key": "content",
+                  "value": "abc",
+                  "type": "text",
+                  "uuid": "407f0b6b-7f8c-419e-b2ad-5f16bdf10169"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/message",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "message"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "NdJ6Lv1dSDjDKm8op0uPBOBXe5vssFAdlGvd2TglfyxpTy4tctfJHKiWpxfnL8YvUoHHtNyYXAsvbPu8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/message/all/{{channel_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "message",
+                "all",
+                "{{channel_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "NdJ6Lv1dSDjDKm8op0uPBOBXe5vssFAdlGvd2TglfyxpTy4tctfJHKiWpxfnL8YvUoHHtNyYXAsvbPu8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\": \"This message has been edited by the user.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/message/update/{{message_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "message",
+                "update",
+                "{{message_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "NdJ6Lv1dSDjDKm8op0uPBOBXe5vssFAdlGvd2TglfyxpTy4tctfJHKiWpxfnL8YvUoHHtNyYXAsvbPu8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/message/delete/{{message_id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "message",
+                "delete",
+                "{{message_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
